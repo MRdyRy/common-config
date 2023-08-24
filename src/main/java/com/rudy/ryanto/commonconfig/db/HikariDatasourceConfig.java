@@ -18,21 +18,21 @@ public class HikariDatasourceConfig {
     private String username;
     @Value("${db.password}")
     private String password;
-    @Value("${db.max.pool}")
+    @Value("${db.pool.maximum}")
     private String maxPool;
-    @Value("${db.min.pool}")
+    @Value("${db.pool.minimum}")
     private String minPool;
     @Value("${db.driver.class.name}")
     private String driverClassName;
-    @Value("${db.min.pool.idle}")
+    @Value("${db.pool.idle}")
     private String minPoolIdle;
-    @Value("${db.leak.detect.threshold}")
+    @Value("${db.pool.leak.detect.threshold}")
     private String leakDetectionThreshold;
-    @Value("${db.max.life.time}")
+    @Value("${db.pool.life.time.max}")
     private String maxLifeTime;
-    @Value("${db.connect.time.out}")
+    @Value("${db.pool.connect.time.out}")
     private String connectionTimeOut;
-    @Value("${db.keepAlive}")
+    @Value("${db.pool.keepAlive}")
     private String keepAlive;
 
     public HikariConfig hikariConfig() {
